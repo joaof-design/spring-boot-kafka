@@ -1,6 +1,6 @@
 package com.demo.kafka.controller;
 
-import com.demo.kafka.engine.Producer;
+import com.demo.kafka.engine.MessageProducer;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
@@ -10,9 +10,9 @@ import org.springframework.web.bind.annotation.RestController;
 @RequestMapping("/api/v1/kafka")
 public class KafkaController {
 
-    private Producer producer;
+    private MessageProducer producer;
 
-    public KafkaController(Producer producer) {
+    public KafkaController(MessageProducer producer) {
         this.producer = producer;
     }
 
